@@ -2523,10 +2523,6 @@ tabpanels {
   min-height: 16px; /* corresponds to the max. height of non-textual tab contents, i.e. the favicon */
 }
 
-#tabbrowser-tabs[overflow=true] > .tabbrowser-tab[pinned]{
-  margin-top: -23px !important;
-}
-
 .tab-throbber[pinned],
 .tab-icon-image[pinned] {
   -moz-margin-start: 5px;
