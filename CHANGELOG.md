@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.1.2
+- (Win10) shade window background on Pale Moon 26 builds later than b2
+- ensure tabs are visible when using Tree-Style Tab
+- fix overflowed pinned tab position
+
 ### 1.1.1
 - fix vertical toolbar borders
 
