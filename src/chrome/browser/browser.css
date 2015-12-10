@@ -686,7 +686,9 @@ toolbar:not(#TabsToolbar):not(#addon-bar):not(:-moz-lwtheme) {
 #home-button,
 #downloads-button,
 #history-button,
+#history-menu-button,
 #bookmarks-button,
+#bookmarks-menu-button,
 #print-button,
 #new-tab-button,
 #new-window-button,
@@ -709,7 +711,9 @@ toolbar:not(#TabsToolbar):not(#addon-bar):not(:-moz-lwtheme) {
 #nav-bar[mode="icons"] #home-button,
 #nav-bar[mode="icons"] #downloads-button,
 #nav-bar[mode="icons"] #history-button,
+#nav-bar[mode="icons"] #history-menu-button,
 #nav-bar[mode="icons"] #bookmarks-button,
+#nav-bar[mode="icons"] #bookmarks-menu-button,
 #nav-bar[mode="icons"] #print-button,
 #nav-bar[mode="icons"] #new-tab-button,
 #nav-bar[mode="icons"] #new-window-button,
@@ -740,7 +744,9 @@ toolbar[mode="text"] #reload-button:hover:active:not([disabled="true"]),
 toolbar[mode="text"] #home-button:hover:active:not(.bookmark-item):not([disabled="true"]),
 toolbar[mode="text"] #downloads-button:hover:active:not([disabled="true"]),
 toolbar[mode="text"] #history-button:hover:active:not([disabled="true"]),
+toolbar[mode="text"] #history-menu-button:hover:active:not([disabled="true"]),
 toolbar[mode="text"] #bookmarks-button:hover:active:not([disabled="true"]),
+toolbar[mode="text"] #bookmarks-menu-button:hover:active:not([disabled="true"]),
 toolbar[mode="text"] #print-button:hover:active:not([disabled="true"]),
 toolbar[mode="text"] #new-tab-button:hover:active:not([disabled="true"]),
 toolbar[mode="text"] #new-window-button:hover:active:not([disabled="true"]),
@@ -883,17 +889,25 @@ toolbar[mode="text"] .bookmark-item > .toolbarbutton-text {
 
 /* ::::: history ::::: */
 
-#history-button {
+#history-button,
+#history-menu-button {
   -moz-image-region: rect(0px, 210px, 30px, 180px);
 }
 
-#history-button:hover {
+#history-button:hover,
+#history-menu-button:hover,
+#history-menu-button[checked="true"],
+#history-menu-button[open="true"] {
   -moz-image-region: rect(30px, 210px, 60px, 180px);
 }
 
 #history-button:hover:active,
 #history-button[checked="true"] {
   -moz-image-region: rect(60px, 210px, 90px, 180px);
+}
+
+#history-menu-button.toolbarbutton-1 {
+  -moz-box-orient: horizontal;
 }
 
 /* ::::: bookmarks ::::: */
@@ -1284,11 +1298,15 @@ toolbar[iconsize="small"] #status4evar-download-button:-moz-lwtheme-brighttext #
 
 /* ::::: history ::::: */
 
-toolbar[iconsize="small"] #history-button {
+toolbar[iconsize="small"] #history-button,
+toolbar[iconsize="small"] #history-menu-button {
   -moz-image-region: rect(0px, 168px, 24px, 144px);
 }
 
-toolbar[iconsize="small"] #history-button:hover {
+toolbar[iconsize="small"] #history-button:hover,
+toolbar[iconsize="small"] #history-menu-button:hover,
+toolbar[iconsize="small"] #history-menu-button[checked="true"],
+toolbar[iconsize="small"] #history-menu-button[open="true"]  {
   -moz-image-region: rect(24px, 168px, 48px, 144px);
 }
 
