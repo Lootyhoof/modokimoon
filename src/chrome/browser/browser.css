@@ -2229,19 +2229,9 @@ toolbar[iconsize="small"][mode="icons"]
 
 .panel-promo-closebutton {
   -moz-appearance: none;
-  list-style-image: url("chrome://global/skin/icons/close.png");
-  -moz-image-region: rect(0px, 14px, 14px, 0px);
   border: none;
   -moz-margin-end: -10px;
   margin-top: -5px;
-}
-
-.panel-promo-closebutton:hover {
-  -moz-image-region: rect(0px, 28px, 14px, 14px);
-}
-
-.panel-promo-closebutton:hover:active {
-  -moz-image-region: rect(0px, 42px, 14px, 28px);
 }
 
 .panel-promo-closebutton > .toolbarbutton-text {
@@ -2507,22 +2497,13 @@ tabpanels {
   -moz-margin-end: 3px;
   border: none;
   padding: 0px;
-  list-style-image: url("chrome://global/skin/icons/close.png");
+}
+
+.tab-close-button:not([selected]):not(:hover):not(:active) {
   -moz-image-region: rect(0px, 56px, 14px, 42px);
 }
 
-.tab-close-button:hover,
-.tab-close-button[selected="true"]:hover {
-  -moz-image-region: rect(0px, 28px, 14px, 14px);
-}
-
-.tab-close-button:hover:active,
-.tab-close-button[selected="true"]:hover:active {
-  -moz-image-region: rect(0px, 42px, 14px, 28px);
-}
-
 .tab-close-button[selected="true"] {
-  -moz-image-region: rect(0px, 14px, 14px, 0px);
   /* Make this button focusable so clicking on it will not focus the tab while
      it's getting closed */
   -moz-user-focus: normal;
@@ -2585,19 +2566,9 @@ tabpanels {
 /* ::::: tabbar close button ::::: */
 
 .tabs-closebutton {
-  list-style-image: url("chrome://global/skin/icons/close.png");
-  -moz-image-region: rect(0px, 14px, 14px, 0px);
   padding: 0;
   margin: 2px 4px;
   border-width: 0;
-}
-
-.tabs-closebutton:hover {
-  -moz-image-region: rect(0px, 28px, 14px, 14px);
-}
-
-.tabs-closebutton:hover:active {
-  -moz-image-region: rect(0px, 42px, 14px, 28px);
 }
 
 /* close tab on tab bar */
@@ -3051,17 +3022,7 @@ tabpanels {
 #addonbar-closebutton {
   border: none;
   padding: 0 5px;
-  list-style-image: url("chrome://global/skin/icons/close.png");
   -moz-appearance: none;
-  -moz-image-region: rect(0px, 14px, 14px, 0px);
-}
-
-#addonbar-closebutton:hover {
-  -moz-image-region: rect(0px, 28px, 14px, 14px);
-}
-
-#addonbar-closebutton:hover:active {
-  -moz-image-region: rect(0px, 42px, 14px, 28px);
 }
 
 /* Status panel */
