@@ -2,9 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/* This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this file,
- * You can obtain one at http://mozilla.org/MPL/2.0/. */
+@import url("chrome://appver/skin/downloads.css");
 
 /*** Panel and outer controls ***/
 
@@ -37,12 +35,6 @@
 #downloadsHistory > .button-box {
   border: none;
   margin: 1em;
-}
-
-@media (-moz-windows-default-theme) {
-  #downloadsPanel[hasdownloads] > #downloadsFooter {
-    background-color: rgb(199, 208, 217);
-  }
 }
 
 /*** Downloads Summary and List items ***/
@@ -326,7 +318,7 @@ toolbar[iconsize="small"] > #downloads-indicator:not([counter]) > #downloads-ind
   text-align: center;
 }
 
-toolbar[brighttext] #downloads-indicator-counter {
+#downloads-indicator-counter:-moz-lwtheme-brighttext {
   color: white;
   text-shadow: 0 0 1px rgba(0,0,0,.7),
                0 1px 1.5px rgba(0,0,0,.5);
