@@ -9,5 +9,3 @@ skin 	platform 	modoki chrome/platform/standard/
 skin 	platform 	modoki chrome/platform/winnt/ os=WINNT
 skin 	platform 	modoki chrome/platform/linux/ os=Linux
 skin 	platform 	modoki chrome/platform/darwin/ os=Darwin
-skin 	appver 	modoki chrome/appver/26/ appversion<27.0.0b1
-skin 	appver 	modoki chrome/appver/27/ appversion>=27.0.0b1
