@@ -1,5 +1,16 @@
 # Changelog
 
+### 1.6.0
+- sync about:support styling with default
+- redesign about:permissions page
+- add new notification icons
+- add new pointer lock icons
+- add image document favicon when viewing standalone images
+- fix "learn more" links in notification popups
+- improve downloads panel appearance
+- sync devtools styling with default
+- allow extensions to style their own toolbarbutton-badge
+
 ### 1.5.0
 - support PM27's devtools
 - drop PM26 support
