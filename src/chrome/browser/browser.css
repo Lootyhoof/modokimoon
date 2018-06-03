@@ -10,6 +10,13 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
 
+:root {
+  --appmenu-border-radius: 4px;
+  --toolbarbutton-large-image: url("chrome://browser/skin/Toolbar.png");
+  --toolbarbutton-small-image: url("chrome://browser/skin/Toolbar-small.png");
+  --window-text-color: currentColor;
+}
+
 /* ::::: toolbox ::::: */
 
 toolbox {
@@ -53,7 +60,7 @@ toolbox {
 #navigator-toolbox[tabsontop="true"] > #nav-bar,
 #navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] + toolbar,
 #navigator-toolbox[tabsontop="true"]:not([customizing]) > #nav-bar[collapsed="true"] + #customToolbars + #PersonalToolbar {
-  background-image: -moz-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+  background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
 }
 
 #personal-bookmarks {
@@ -78,9 +85,9 @@ toolbox {
 #appmenu-button,
 #appmenu-toolbar-button {
   -moz-appearance: none;
-  background: -moz-linear-gradient(rgb(170,182,196), rgb(170,182,196) 95%);
+  background: linear-gradient(rgb(170,182,196), rgb(170,182,196) 95%);
   background-clip: padding-box;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 var(--appmenu-border-radius) var(--appmenu-border-radius);
   border: 1px solid rgba(0,0,0,.9);
   border-top: none;
   box-shadow: 0 1px 0 rgba(0,0,0,.25) inset,
@@ -101,7 +108,7 @@ toolbox {
 
 #main-window[privatebrowsingmode=temporary] #appmenu-button,
 #main-window[privatebrowsingmode=temporary] #appmenu-toolbar-button {
-  background: -moz-linear-gradient(rgb(160,0,234), rgb(160,0,234) 95%);
+  background: linear-gradient(rgb(160,0,234), rgb(160,0,234) 95%);
   border-color: rgba(0,0,0,.9);
 }
 
@@ -109,7 +116,7 @@ toolbox {
 #appmenu-button[open],
 #appmenu-toolbar-button:hover:active,
 #appmenu-toolbar-button[open] {
-  background: -moz-linear-gradient(rgb(144,161,179), rgb(144,161,179) 95%);
+  background: linear-gradient(rgb(144,161,179), rgb(144,161,179) 95%);
   border-radius: 0;
 }
 
@@ -117,7 +124,7 @@ toolbox {
 #main-window[privatebrowsingmode=temporary] #appmenu-button[open],
 #main-window[privatebrowsingmode=temporary] #appmenu-toolbar-button:hover:active,
 #main-window[privatebrowsingmode=temporary] #appmenu-toolbar-button[open] {
-  background: -moz-linear-gradient(rgb(134,0,196), rgb(134,0,196) 95%);
+  background: linear-gradient(rgb(134,0,196), rgb(134,0,196) 95%);
 }
 
 #appmenu-button > .button-box {
@@ -203,7 +210,7 @@ toolbox {
 .appmenu-edit-button:not([disabled]):hover {
   border: 1px solid #b8d6fb;
   box-shadow: inset 0 0 1px white;
-  background: -moz-linear-gradient(#fafbfd, #ebf3fd);
+  background: linear-gradient(#fafbfd, #ebf3fd);
   -moz-transition: .2s ease-in;
 }
 
@@ -290,7 +297,7 @@ toolbox {
 /* ::::: navigation toolbar ::::: */
 
 #nav-bar {
-  background-image: -moz-linear-gradient(center top, rgb(221, 227, 235), rgb(221, 227, 235) 10%, rgb(199, 208, 217) 50%, rgb(177, 189, 201) 80%);
+  background-image: linear-gradient(to bottom, rgb(221, 227, 235), rgb(221, 227, 235) 10%, rgb(199, 208, 217) 50%, rgb(177, 189, 201) 80%);
   background-repeat: no-repeat;
   border-top-color: rgb(235, 244, 255);
   border-right-color: rgb(149, 160, 173);
@@ -377,7 +384,7 @@ toolbox {
 /* ::::: bookmarks toolbar ::::: */
 
 #PersonalToolbar {
-  background-image: -moz-linear-gradient(center top, rgb(177, 189, 201), rgb(199, 208, 217) 17px);
+  background-image: linear-gradient(to bottom, rgb(177, 189, 201), rgb(199, 208, 217) 17px);
   background-repeat: no-repeat;
   border-top-color: rgb(206, 214, 221);
   border-right-color: rgb(149, 160, 173);
@@ -592,7 +599,7 @@ toolbar[mode="text"] toolbarbutton.chevron > .toolbarbutton-icon {
 
 .toolbarbutton-1 {
   min-width: 0;
-  list-style-image: url("chrome://browser/skin/Toolbar.png");
+  list-style-image: var(--toolbarbutton-large-image);
 }
 
 toolbar[mode="full"] .toolbarbutton-1:not([type=menu-button]) {
@@ -618,7 +625,7 @@ toolbar:not(#TabsToolbar):not(#addon-bar):not(:-moz-lwtheme) {
 /* ..... navigation toolbar ..... */
 
 #nav-bar .toolbarbutton-1[checked="true"] {
-  background-image: -moz-linear-gradient(center top, rgb(169, 180, 190), rgb(169, 180, 190) 10%, rgb(140, 154, 168) 50%, rgb(123, 138, 152) 80%);
+  background-image: linear-gradient(to bottom, rgb(169, 180, 190), rgb(169, 180, 190) 10%, rgb(140, 154, 168) 50%, rgb(123, 138, 152) 80%);
   background-repeat: no-repeat;
 }
 
@@ -850,15 +857,6 @@ toolbar[mode="text"] .bookmark-item > .toolbarbutton-text {
   -moz-image-region: rect(60px, 180px, 90px, 150px);
 }
 
-/* download status button */
-#status4evar-download-button #status4evar-download-icon,
-#status4evar-download-button:-moz-lwtheme-brighttext #status4evar-download-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"),
-                              0, 180, 30, 150) !important;
-  width:30px;
-  height:30px;
-}
-
 /* ::::: history ::::: */
 
 #history-button,
@@ -902,7 +900,7 @@ toolbar[mode="text"] .bookmark-item > .toolbarbutton-text {
 }
 
 #bookmarks-menu-button.bookmark-item {
-  list-style-image: url("chrome://browser/skin/Toolbar.png");
+  list-style-image: var(--toolbarbutton-large-image);
 }
 #bookmarks-menu-button.toolbarbutton-1 {
   -moz-box-orient: horizontal;
@@ -1164,7 +1162,7 @@ toolbar[iconsize="small"] #tabview-button > image {
 
 toolbar[iconsize="small"] .toolbarbutton-1 {
   min-width: 0;
-  list-style-image: url("chrome://browser/skin/Toolbar-small.png");
+  list-style-image: var(--toolbarbutton-small-image);
 }
 
 /* ::::: back ::::: */
@@ -1256,18 +1254,6 @@ toolbar[iconsize="small"] #downloads-button:hover:active {
   -moz-image-region: rect(48px, 144px, 72px, 120px);
 }
 
-
-
-/* download status button */
-toolbar[iconsize="small"] #status4evar-download-button #status4evar-download-icon,
-toolbar[iconsize="small"] #status4evar-download-button:-moz-lwtheme-brighttext #status4evar-download-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-small.png"),
-                              0, 144, 24, 120) !important;
-  width:24px;
-  height:24px;
-}
-
-
 /* ::::: history ::::: */
 
 toolbar[iconsize="small"] #history-button,
@@ -1307,7 +1293,7 @@ toolbar[iconsize="small"] #bookmarks-menu-button[open="true"] {
 }
 
 toolbar[iconsize="small"] #bookmarks-menu-button {
-  list-style-image: url("chrome://browser/skin/Toolbar-small.png") !important;
+  list-style-image: var(--toolbarbutton-small-image) !important;
 }
 toolbar[iconsize="small"]#bookmarks-menu-button.toolbarbutton-1 {
   -moz-box-orient: horizontal;
@@ -1465,7 +1451,7 @@ toolbar[iconsize="small"] #zoom-in-button[disabled="true"] {
 /* ::::: home button (on the bookmarks toolbar) ::::: */
 
 #home-button.bookmark-item {
-  list-style-image: url("chrome://browser/skin/Toolbar-small.png");
+  list-style-image: var(--toolbarbutton-small-image);
 }
 
 #home-button.bookmark-item[disabled="true"] > .toolbarbutton-icon {
@@ -1675,7 +1661,7 @@ toolbar[iconsize="small"][mode="icons"]
 
 #identity-box {
   color: rgb(0, 0, 0);
-  background-image: -moz-linear-gradient(center top, rgb(221, 227, 235), rgb(221, 227, 235) 20%, rgb(199, 208, 217) 50%, rgb(177, 189, 201) 80%);
+  background-image: linear-gradient(to bottom, rgb(221, 227, 235), rgb(221, 227, 235) 20%, rgb(199, 208, 217) 50%, rgb(177, 189, 201) 80%);
   background-repeat: no-repeat;
   border-right: 1px solid rgb(93, 97, 110);
   box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3) inset, -1px -1px 0 rgba(0, 0, 0, 0.1) inset;
@@ -1694,30 +1680,30 @@ toolbar[iconsize="small"][mode="icons"]
 #identity-box[open="true"],
 #identity-box:hover:active {
   color: rgb(255, 255, 255);
-  background-image: -moz-linear-gradient(center top, rgb(198, 208, 219), rgb(198, 208, 219) 20%, rgb(170, 182, 196) 50%, rgb(141, 156, 173) 80%);
+  background-image: linear-gradient(to bottom, rgb(198, 208, 219), rgb(198, 208, 219) 20%, rgb(170, 182, 196) 50%, rgb(141, 156, 173) 80%);
   box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2) inset, -1px -1px 0 rgba(0, 0, 0, 0.1) inset;
 }
 
 /* ..... SSL ..... */
 
 #identity-box.verifiedDomain {
-  background-image: -moz-linear-gradient(center top, rgb(183, 216, 254), rgb(183, 216, 254) 20%, rgb(152, 192, 254) 50%, rgb(121, 168, 253) 80%);
+  background-image: linear-gradient(to bottom, rgb(183, 216, 254), rgb(183, 216, 254) 20%, rgb(152, 192, 254) 50%, rgb(121, 168, 253) 80%);
 }
 
 #identity-box.verifiedDomain[open="true"],
 #identity-box.verifiedDomain:hover:active {
-  background-image: -moz-linear-gradient(center top, rgb(121, 176, 254), rgb(121, 176, 254) 20%, rgb(91, 145, 253) 50%, rgb(62, 114, 252) 80%);
+  background-image: linear-gradient(to bottom, rgb(121, 176, 254), rgb(121, 176, 254) 20%, rgb(91, 145, 253) 50%, rgb(62, 114, 252) 80%);
 }
 
 /* ..... EV SSL ..... */
 
 #identity-box.verifiedIdentity {
-  background-image: -moz-linear-gradient(center top, rgb(188, 239, 168), rgb(188, 239, 168) 20%, rgb(158, 226, 136) 50%, rgb(128, 213, 104) 80%);
+  background-image: linear-gradient(to bottom, rgb(188, 239, 168), rgb(188, 239, 168) 20%, rgb(158, 226, 136) 50%, rgb(128, 213, 104) 80%);
 }
 
 #identity-box.verifiedIdentity[open="true"],
 #identity-box.verifiedIdentity:hover:active {
-  background-image: -moz-linear-gradient(center top, rgb(128, 222, 99), rgb(128, 222, 99) 20%, rgb(98, 200, 73) 50%, rgb(68, 178, 47) 80%);
+  background-image: linear-gradient(to bottom, rgb(128, 222, 99), rgb(128, 222, 99) 20%, rgb(98, 200, 73) 50%, rgb(68, 178, 47) 80%);
 }
 
 #identity-icon-label {
@@ -2080,7 +2066,7 @@ toolbar[iconsize="small"][mode="icons"]
 }
 
 #download-monitor {
-  list-style-image: url("chrome://browser/skin/Toolbar.png");
+  list-style-image: var(--toolbarbutton-large-image);
   -moz-image-region: rect(0, 108px, 18px, 90px);
 }
 
@@ -2699,7 +2685,7 @@ tabpanels {
 /* ::::: all tabs button ::::: */
 
 .tabs-alltabs-box-animate {
-  -moz-background-size: 26px 21px;
+  background-size: 26px 21px;
   background-image: url("chrome://browser/skin/tabbrowser/alltabs-overflow.png");
   background-position: center center;
   background-repeat: no-repeat;
@@ -3759,7 +3745,7 @@ html|*#gcli-output-frame {
 
   sidebarheader {
     -moz-appearance: none !important;
-    background-image: -moz-linear-gradient(bottom, rgba(0,0,0,.05) 1px, transparent 50%);
+    background-image: linear-gradient(rgba(0,0,0,.05) 1px, transparent 50%);
   }
 
   #minimize-button:-moz-locale-dir(rtl),
@@ -4137,7 +4123,7 @@ html|*#gcli-output-frame {
 
   #tab-view:-moz-lwtheme {
     background-image: url("chrome://browser/skin/tabview/grain.png"),
-                      -moz-linear-gradient(rgba(255,255,255,0), #CCD9EA 200px, #C7D5E7);
+                      linear-gradient(rgba(255,255,255,0), #CCD9EA 200px, #C7D5E7);
     background-attachment: fixed;
   }
 }
