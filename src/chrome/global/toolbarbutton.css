@@ -2,13 +2,13 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/* ===== toolbarbutton.css ==============================================
-  == Styles used by XUL toolbarbutton elements.
+/* ===== toolbarbutton.css =====================================================
+  == Styles used by the XUL button element.
   ======================================================================= */
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/* ::::: ツールバーボタン ::::: */
+/* ::::: toolbarbutton ::::: */
 
 toolbarbutton {
   -moz-box-align: center;
@@ -103,7 +103,7 @@ toolbarbutton:-moz-lwtheme:not([checked="true"]):not([disabled="true"]) {
   text-shadow: inherit;
 }
 
-/* ::::: ツールバーボタン メニュー ::::: */
+/* ::::: toolbarbutton menu ::::: */
 
 .toolbarbutton-menu-dropmarker {
   background-color: transparent !important;
@@ -117,7 +117,7 @@ toolbarbutton:-moz-lwtheme:not([checked="true"]):not([disabled="true"]) {
   list-style-image: url("chrome://global/skin/button/tbmenu-arrow-dis.png");
 }
 
-/* ::::: ツールバーボタン メニューボタン ::::: */
+/* ::::: toolbarbutton menu-button ::::: */
 
 toolbarbutton[type="menu-button"] {
   -moz-box-align: stretch;
@@ -142,7 +142,8 @@ toolbarbutton[type="menu-button"][disabled="true"] {
 
 /* ::::: toolbarbutton badged ::::: */
 
-.toolbarbutton-badge-container > .toolbarbutton-icon[label]:not([label=""]) {
+.toolbarbutton-badge-container > .toolbarbutton-icon[label]:not([label=""]),
+.toolbarbutton-badge-stack > .toolbarbutton-icon[label]:not([label=""]) {
   -moz-margin-end: 0;
 }
 
@@ -182,7 +183,7 @@ toolbarbutton[type="menu-button"][disabled="true"] {
   position: relative;
 }
 
-/* ..... ドロップマーカ ..... */
+/* .......... dropmarker .......... */
 
 .toolbarbutton-menubutton-dropmarker {
   background-color: transparent !important;
