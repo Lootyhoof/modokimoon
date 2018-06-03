@@ -4180,10 +4180,6 @@ html|*#gcli-output-frame {
   #main-window[sizemode="maximized"] #navigator-toolbox[tabsontop="true"] > #toolbar-menubar[autohide="true"] {
     border: none;
   }
-  
-  #main-window[sizemode="maximized"] #navigator-toolbox[tabsontop="true"] > #toolbar-menubar[autohide="true"] > #main-menubar {
-    background: transparent;
-  }
 
   #main-window[sizemode=fullscreen]:not(:-moz-lwtheme) {
     -moz-appearance: none;
