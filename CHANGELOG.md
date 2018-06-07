@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.7.0
+- add initial Pale Moon 28 support
+- draw a background on Win10 for better accent color detection
+- sync statusbar styling with default
+- sync devtools styling with PM27 default
+
 ### 1.6.0
 - sync about:support styling with default
 - redesign about:permissions page
