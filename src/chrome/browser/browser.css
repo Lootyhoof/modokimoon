@@ -1900,7 +1900,8 @@ toolbar[iconsize="small"][mode="icons"]
 }
 
 .popup-notification-icon[popupid="password-save"],
-.popup-notification-icon[popupid="password-change"] {
+.popup-notification-icon[popupid="password-change"],
+.popup-notification-icon[popupid="password"] {
   list-style-image: url(chrome://mozapps/skin/passwordmgr/key-64.png);
 }
 
