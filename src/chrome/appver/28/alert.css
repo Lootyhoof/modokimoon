@@ -6,39 +6,107 @@
   == Styles specific to the alerts dialog.
   ======================================================================= */
 
-@import url("chrome://global/skin/alerts/alert-common.css");
+@import url("chrome://global/skin/");
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-#alertNotification {
-  -moz-appearance: none;
-  background: transparent;
-  padding: 10px;
+.alertBox {
+  background-color: #C7D0D9;
 }
 
-#alertBox {
-  border: 1px solid #7B969C;
-  border-radius: 1px;
-  background-color: #C7D0D9;
-  color: #22262F;
+#alertBox[hasBodyText] > #alertTitleBox,
+#alertBox[hasOrigin] > #alertTitleBox {
+  border-bottom: 1px solid #7B969C;
+}
+
+#alertBox[animate][clicked],
+#alertBox[animate][closing] {
+  animation-duration: 0.75s;
+}
+
+alertBox[hasImage] > box > .alertImageBox {
+  padding: 4px;
+  width: 64px;
+}
+
+.alertTextBox {
+  padding: 4px;
+  width: 255px;
+  -moz-box-flex: 1;
+}
+
+.alertTitle {
+  font-weight: bold;
+  font-size: 110%;
+  padding: 4px;
+  -moz-box-flex: 1;
+}
+
+.alertSource {
+  color: #8C99AB;
+  -moz-box-flex: 1;
+}
+
+#alertImage {
+  max-width: 48px;
+  max-height: 48px;
+  list-style-image: url("chrome://global/skin/alerts/notification-48.png");
+}
+
+#alertNotification {
+  border: ridge #5486DA 4px;
+}
+
+#alertNotification[clickable="true"] {
+  cursor: pointer;
+}
+
+label {
+  cursor: inherit;
+}
+
+.alertText[clickable="true"] {
+  color: #1455D6;
+  text-decoration: underline;
+}
+
+.alertText[clickable="true"]:hover:active {
+  color: #424F63;
+}
+
+@keyframes alert-animation {
+  from {
+    opacity: 0;
+  }
+  6.25% {
+    opacity: 1;
+  }
+  93.75% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .alertCloseButton {
-  -moz-appearance: none;
-  padding: 4px 2px;
-  border: none !important;
+  padding: 4px;
+  border: none;
 }
 
-.alertCloseBox {
-  /* The close button is larger on Windows and has a large
-     circle around it, so we add more space between the close
-     button and the edge of the window. */
-  margin-inline-end: 2px;
+#alertFooter {
+  -moz-box-align: end;
 }
 
 #alertSettings {
-  /* The close button is larger on Windows, so the
-     gear button is moved over to accomodate it and
-     keep the two buttons horizontally aligned together. */
-  margin-inline-end: 5px;
+  min-width: 0px;
+  list-style-image: url("chrome://mozapps/skin/extensions/utilities.png");
+  margin: 0px;
+  border: none;
+  background-color: transparent;
+}
+
+.button-menu-dropmarker,
+.button-text {
+  display: none;
 }
