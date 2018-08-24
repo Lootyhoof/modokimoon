@@ -195,7 +195,7 @@ menulist > menupopup > menu {
   font: message-box;
   padding-top: 1px;
   padding-bottom: 1px;
-  -moz-padding-end: 26px;
+  padding-inline-end: 26px;
 }
 
 menulist > menupopup > menuitem[_moz-menuactive="true"],

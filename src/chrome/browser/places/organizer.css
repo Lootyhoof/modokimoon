@@ -20,11 +20,11 @@
 }
 
 #back-button {
-  -moz-margin-start: 8px;
+  margin-inline-start: 8px;
 }
 
 #forward-button {
-  -moz-margin-end: 8px;
+  margin-inline-end: 8px;
 }
 
 #back-button,
@@ -83,7 +83,7 @@
 }
 
 #placesMenu > menu > label {
-  -moz-padding-end: 8px;
+  padding-inline-end: 8px;
   background: url(chrome://global/skin/arrow/arrow-dn.gif) right center no-repeat;
 }
 
@@ -92,8 +92,8 @@
 }
 
 #placesToolbar > toolbarbutton[type="menu"] {
-  -moz-margin-start: 5px;
-  -moz-padding-end: 10px;
+  margin-inline-start: 5px;
+  padding-inline-end: 10px;
 }
 
 /* organize button */
@@ -145,7 +145,7 @@
 }
 
 #infoBoxExpanderLabel {
-  -moz-padding-start: 2px;
+  padding-inline-start: 2px;
 }
 
 #searchFilter {
@@ -161,8 +161,8 @@
 }
 
 #clearDownloadsButton {
-  -moz-padding-start: 9px;
-  -moz-padding-end: 9px;
+  padding-inline-start: 9px;
+  padding-inline-end: 9px;
 }
 
 .textbox-input-closebutton {
@@ -233,7 +233,7 @@ button[disabled="true"] {
 
 #organizerScopeBar {
   padding: 2px 0;
-  -moz-padding-end: 3px;
+  padding-inline-end: 3px;
 }
 
 #organizerScopeBar > toolbarbutton {

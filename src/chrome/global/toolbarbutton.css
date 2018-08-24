@@ -22,7 +22,7 @@ toolbarbutton {
 
 .toolbarbutton-icon[label]:not([label=""]),
 .toolbarbutton-icon[type="menu"] {
-  -moz-margin-end: 2px;
+  margin-inline-end: 2px;
 }
 
 .toolbarbutton-text {
@@ -55,8 +55,8 @@ toolbarbutton[open="true"]:hover,
 toolbarbutton:hover:active:not([disabled="true"]) {
   padding-top: 2px;
   padding-bottom: 0;
-  -moz-padding-start: 3px;
-  -moz-padding-end: 1px;
+  padding-inline-start: 3px;
+  padding-inline-end: 1px;
   border-top-color: rgb(134, 146, 158);
   border-right-color: rgb(238, 240, 243);
   border-bottom-color: rgb(238, 240, 243);
