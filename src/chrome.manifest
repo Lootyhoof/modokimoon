@@ -3,7 +3,6 @@ skin 	communicator 	modoki chrome/communicator/
 skin 	global 	modoki chrome/global/
 skin 	mozapps 	modoki chrome/mozapps/
 skin 	inspector 	modoki chrome/inspector/
-skin 	reporter 	modoki chrome/reporter/
 skin 	addons 	modoki chrome/addons/
 skin 	platform 	modoki chrome/platform/standard/
 skin 	platform 	modoki chrome/platform/winnt/ os=WINNT
