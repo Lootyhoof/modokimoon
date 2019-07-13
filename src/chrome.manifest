@@ -4,10 +4,9 @@ skin 	global 	modoki chrome/global/
 skin 	mozapps 	modoki chrome/mozapps/
 skin 	inspector 	modoki chrome/inspector/
 skin 	addons 	modoki chrome/addons/
-skin 	platform 	modoki chrome/platform/standard/
-skin 	platform 	modoki chrome/platform/winnt/ os=WINNT
-skin 	platform 	modoki chrome/platform/linux/ os=Linux
-skin 	platform 	modoki chrome/platform/darwin/ os=Darwin
+skin 	os 	modoki chrome/os/winnt/ os=WINNT
+skin 	os 	modoki chrome/os/linux/ os=Linux
+skin 	os 	modoki chrome/os/darwin/ os=Darwin
 
 override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplete.css
 override chrome://devtools/skin/floating-scrollbars-dark-theme.css chrome://global/skin/devtools/floating-scrollbars.css
