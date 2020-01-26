@@ -1,5 +1,5 @@
 # Modoki Moon
-![Preview](http://i65.tinypic.com/2wqefjm.png)
+![Preview](https://i.imgur.com/QLNTMA6.png)
 
 Remake of the "Modern Modoki" theme for Pale Moon.
 
