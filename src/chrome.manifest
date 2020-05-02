@@ -4,8 +4,8 @@ skin 	global 	modoki chrome/global/
 skin 	mozapps 	modoki chrome/mozapps/
 skin 	inspector 	modoki chrome/inspector/
 skin 	addons 	modoki chrome/addons/
+skin 	os 	modoki chrome/os/linux/
 skin 	os 	modoki chrome/os/winnt/ os=WINNT
-skin 	os 	modoki chrome/os/linux/ os=Linux
 skin 	os 	modoki chrome/os/darwin/ os=Darwin
 
 override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplete.css
