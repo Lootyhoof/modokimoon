@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.12.0
+- support other GTK-based operating systems
+
 ### 1.11.2
 - Pale Moon 29: clarify the status of Firefox extensions in the Add-ons Manager
 
