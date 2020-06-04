@@ -449,7 +449,7 @@ toolbar:-moz-lwtheme,
 }
 
 /* content display */
-#content {
+#main-window:not([inFullscreen]) #content {
   border-bottom: 1px solid rgb(73, 79, 93);
 }
 
@@ -2443,6 +2443,9 @@ toolbar[iconsize="small"][mode="icons"]
 
 tabpanels {
   -moz-appearance: none;
+}
+
+#main-window:not([inFullscreen]) tabpanels {
   border-top: 1px solid #404040 !important;
 }
 
