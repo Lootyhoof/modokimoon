@@ -9,7 +9,7 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>modoki@lootyhoof-pm</em:id>
-    <em:version>1.12.0</em:version>
+    <em:version>1.12.1</em:version>
     <em:name>Modoki Moon</em:name>
     <em:description>Remake of the Modern Modoki theme for Pale Moon.</em:description>
     <em:creator>Lootyhoof</em:creator>

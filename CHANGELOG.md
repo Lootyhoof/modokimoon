@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.12.1
+- don't show a border on fullscreen
+
 ### 1.12.0
 - support other GTK-based operating systems
 
