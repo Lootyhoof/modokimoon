@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.14.0
+- initial HTML date/time picker support
+- improve about:newtab search button readability
+- support Pale Moon 31
+
 ### 1.13.0
 - add mixed-mode SSL styling
 - support Pale Moon 30
